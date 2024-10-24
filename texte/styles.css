@@ -1,0 +1,140 @@
+footer {
+  background: linear-gradient(to right, #1f3984, #92406d, #f26b30);
+  color: white;
+  padding: 40px 0; /* Maior espaçamento superior e inferior */
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 40px; /* Aumenta o espaçamento lateral entre as colunas */
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column p {
+  margin: 5px 0;
+}
+
+/* Social section adjustments */
+.social-section {
+  display: flex;
+  justify-content: flex-end; /* Posiciona os ícones à direita */
+  margin-right: 40px; /* Ajuste para afastar mais os ícones */
+}
+
+.social-section a {
+  margin-left: 20px; /* Espaçamento entre os ícones de redes sociais */
+}
+
+.footer-button {
+  text-align: right;
+  padding-right: 40px;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #1f3984;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #14255c;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* From Uiverse.io by kamehame-ha */ 
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}

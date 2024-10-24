@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container do banner */
+.container__banner {
+    text-align: left;
+    padding: 5rem;
+    background-image: url('../imagens/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+hr {
+    width: 50%;
+    border: 1px solid #FF6500;
+    width: 50%; /* Define a largura da linha */
+    height: 2px; /* Espessura da linha */
+    border: none; /* Remove a borda padrão */
+    background-color: #FF6500; /* Cor da linha */
+    margin-left: 0; /* Sem margem à esquerda */
+    margin-right: auto; /* Para garantir que a linha fique à esquerda */
+    margin-top: 20px; /* Margem acima */
+    margin-bottom: 20px; /* Margem abaixo */ 
+}
+
+/* Títulos */
+h3 {
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Subtítulo */
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: aliceblue;
+}
+
+/* Parágrafo */
+.container__banner p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    color: aliceblue;
+    text-align: left;
+}
+
+/* Botão "Começar" */
+.comecar {
+    background-color: #FF6500;
+    text-decoration: none;
+    color: #333;
+    padding: 25px 82px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.comecar:hover {
+    background-color: #c1c2c5;
+    
+}
+
+/* Botão "Saiba mais" */
+.conhecer {
+    text-decoration: none;
+    color: #333;
+    padding: 22px 75px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: 2px solid #FF6500;
+    border-radius: 40px;
+    margin: 0 10px;
+}
+
+.conhecer:hover {
+    background-color: #FF6500;
+}
+
+/* Responsividade para telas menores */
+
+/* Ajustes para tablets e telas menores que 1024px*/
+@media (max-width: 1024px) {
+    .container__banner {
+        padding: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h5 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .comecar, .conhecer {
+        padding: 20px 60px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Ajustes para telas menores que 768px (smartphones) */
+@media (max-width: 768px) {
+    .container__banner {
+        padding: 2rem;
+        text-align: center; /* Centralizar o texto e os botões no mobile */
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Ajustes nos botões para caber melhor em telas pequenas */
+    .comecar, .conhecer {
+        display: block; /* Tornar os botões em blocos para melhor layout no mobile */
+        width: 100%; /* Fazer os botões ocuparem toda a largura da tela */
+        margin-bottom: 15px; /* Adicionar espaçamento entre os botões */
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}

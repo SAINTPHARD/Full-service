@@ -1,0 +1,58 @@
+/* Resetando o margin padrão do body e definindo uma fonte básica */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos da seção de números com gradiente no fundo */
+.section__numeros {
+    background: linear-gradient(90deg, #1d3b8a, #9e2f59, #cf5a23);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 40px;
+}
+
+/* Estilo do título da seção */
+.section__numeros h2 {
+    font-size: 34px;
+    margin-bottom: 5rem;
+    font-weight:600;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+
+/* Container que organiza os números com flexbox */
+.numeros__container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin: 8rem;
+}
+
+/* Estilo dos números principais */
+.numero {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Estilo das descrições abaixo dos números */
+.descricao {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+/* Tornando a seção responsiva para telas menores */
+@media (max-width: 768px) {
+    .numeros__container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .numero {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção de Serviços com Formulário</title>
+    <!-- Vinculando o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="container">
+        <!-- Bloco de serviços com 2 linhas e 2 colunas -->
+        <div class="section-servicos">
+            <div class="servico">
+                <img src="icone-equipe.png" alt="Ícone Equipe Qualificada">
+                <h3>Equipe qualificada</h3>
+                <p>Nossa equipe é treinada, especializada e certificada, temos a convicção de que cada cliente, cada projeto é único.</p>
+            </div>
+            <div class="servico">
+                <img src="icone-tecnologia.png" alt="Ícone Melhor Tecnologia">
+                <h3>Melhor tecnologia</h3>
+                <p>Somos parceiros dos principais players de segurança do planeta. O que há de mais inovador em segurança da TI, entregamos aos nossos projetos.</p>
+            </div>
+            <div class="servico">
+                <img src="icone-prazos.png" alt="Ícone Gestão de Prazos">
+                <h3>Gestão de Prazos e Orçamentos</h3>
+                <p>Administre sua infraestrutura e execute Projetos de TI com prazos e orçamentos enxutos.</p>
+            </div>
+            <div class="servico">
+                <img src="icone-compliance.png" alt="Ícone Governança e Compliance">
+                <h3>Governança e Compliance TI</h3>
+                <p>Nascemos do espírito de empreendedores. Pensamos fora da caixa em busca de soluções e testamos novos jeitos de fazer.</p>
+            </div>
+        </div>
+    
+        <!-- Formulário ao lado direito -->
+    </section>
+
+    <div class="form-container">
+      <h2>Contato</h2>
+      <p>Fale com os nossos especialistas de cybersecurity! Let's Full</p>
+      <form action="#" method="post">
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="nome">Nome Completo <span>*</span></label>
+                  <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">E-mail <span>*</span></label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="telefone">Número de Telefone</label>
+                  <input type="tel" id="telefone" name="telefone" placeholder="(11) 96123-4567">
+              </div>
+              <div class="form-group">
+                  <label for="empresa">Nome da Empresa</label>
+                  <input type="text" id="empresa" name="empresa">
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="mensagem">Conte-nos o seu desafio?</label>
+                  <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+              </div>
+          </div>
+
+        <div class="coolinput">
+            <label for="input" class="text">Name:</label>
+            <input type="text" placeholder="Write here..." name="input" class="input">
+        </div>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+  </div>
+
+  <div class="card">
+    <img src="minha-imagem.jpg" alt="Minha Imagem">
+    <h2>Título do Card</h2>
+    <p>Este é um exemplo de um card criado com HTML e CSS. Você pode personalizar o conteúdo e o estilo de acordo com suas necessidades.</p>
+    <button>Saiba Mais</button>
+</div>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-column logo-section">
+            <img src="logo.png" alt="Full Service Logo" class="footer-logo">
+        </div>
+        <div class="footer-column links-section">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Soluções</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+        <div class="footer-column contact-section">
+            <h3>Fale Conosco</h3>
+            <p><strong>e-mail:</strong> contato@fullservice.com.br</p>
+            <p><strong>Fone:</strong> (11) 3385-1770</p>
+            <p>Avenida Marquês de São Vicente, 1619 – salas 1814 a 1816.</p>
+            <p>Cep 01139-003 – Barra Funda</p>
+            <p>São Paulo – SP</p>
+        </div>
+        <div class="footer-column social-section">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <p>&copy; 2024 Robedson SAINT PHARD.Todos os direitos reservados. 
+                Proibida a reprodução total ou parcial 
+                deste SITE sem autorização prévia.
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer-button">
+        <a href="#" class="button">Let's Full</a>
+    </div>
+</footer>
+
+  
+    <script>
+        // Aqui você pode adicionar a lógica para o envio do formulário,
+// validação dos campos, e integração com as APIs do Google e Facebook.
+// Exemplo simples de envio:
+const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  // Envie os dados do formulário para o servidor
+  const formData = new FormData(form);
+  // ...
+});
+    </script>
+
+
+</body>
+</html>

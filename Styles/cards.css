@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.portfolio {
+    display: grid;
+    background-color: rgb(235, 233, 233);
+}
+
+.portfolio h1 {
+    text-align: center;
+    font-size: 30px;
+    /* font-weight: bold; */
+    font-family:'Times New Roman', Times, serif;
+    color:rgb(27, 27, 126);
+    margin-bottom: 40px; /* Espaçamento inferior para separar o título dos cards */
+}
+
+/* Estiliza o contêiner que envolve todos os cards e usa o layout de grade (grid) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+    justify-self: center; /*Posicionar os cards no centro*/
+    place-items:center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;         /* Centraliza o contêiner de cards horizontalmente */
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* Estiliza cada card separadamente */
+/* --- Estilos Individuais dos Cards --- */
+
+.card {
+    background-color: white;
+    padding: 20px;              /* Espaçamento interno (padding) do card */
+    /* position: relative; posicionamento relativo para usar posicionamento absoluto em seus filhos (título e descrição) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao redor do card */
+    border-radius: 8px;                         /*Bordas arredondas*/
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+
+    /* width: 400px; */
+    height: 300px;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas do card */
+    /* border-radius: 10px; Bordas arredondadas do card */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Adiciona uma leve sombra ao redor do card */
+    /* transition: box-shadow 0.3s ease-in-out; Efeito de transição suave no hover */
+    cursor: pointer;
+    /* transition: transform 0.3s ease; */
+    /* margin: 1px; */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 6; */
+    /* -webkit-box-orient: vertical; */
+    /* overflow: hidden; */
+}
+
+/* Efeito hover: adiciona elevação ao card quando o mouse passa por cima */
+.card:hover { 
+    transform: translateY(-5px);     /* Move o card para cima ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Aumenta a sombra ao passar o mouse */
+}
+
+/*estilo para a imagem dentro do card*/
+.card img {
+    max-width: 90px;
+    margin-bottom: 1px;  /*ESpaço entre a imagem e o titulo dfo card*/
+}
+
+/*Estilo para titulo do card*/
+.card h3 { 
+    font-size: 1.5rem;   
+    font-weight: bold;
+    color: #FF6500; 
+    margin-bottom: 10px; 
+    /* line-height: 1.6; Espaço entre as linhas */
+}
+
+/*Estilo para descrição do card*/
+.card .description {
+    font-size: 1rem;  /*Tamanho do texto*/
+    color: #666;    /*Cor de texto Azul marinho*/
+    line-height: 1.6; /*Espaço entre as linhas para legibilidade*/
+}
+
+/*Estilo para link "leia mais" dentro do card*/
+.card .leia-mais {
+    display: inline-block; /*Para que o link seja exibido como um botão*/
+    margin-top: 10px;      /*Espaço superior entre o paragrafo e o link*/
+    /* padding: 5px 10px;      */
+    color: #FF6500; 
+    text-decoration: none; /*Remover sublinhado do link*/
+    font-weight: bold;     /*Fonte em negrito*/
+}
+
+/* efeito hover: colocando sulblinhado ao link quando passar o mouse por cima*/
+.card .leia-mais:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #0056b3;
+}
+
+/*Responsividade*/
+
+
+/* Para telas menos que 768px (tablests smartphones)*/
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 2rem; /*TAmanho menor do titulo*/
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*colunas menores*/
+    }
+
+    .card {
+        padding: 15px;    /*Reduz o padding  dos cards*/
+    }
+
+    .card h3 {
+        font-size: 1.3rem;   /*reduxz o tamanho do titulo dos cards*/
+    }
+
+    .card .description {
+        font-size: 0.9rem;      /*Reduz o tamanho dos texto, levemente*/
+    }
+}
+
+/*Para telas menor que 576px (Smartphones)*/
+@media (max-width: 576px) {
+    .container h1 {
+        font-size: 1.5rem; /*Reduz o tamanho do titulo*/
+    }
+
+    .container p {
+        font-size: 0.90rem; /*Reduz o tamanho do paragrafo*/
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*colunas menores em apenas uma coluna*/ 
+    }
+
+    .card {
+        padding: 10px;    /*Reduz o padding  dos cards*/
+    }
+
+    .card h3 {
+        font-size: 1.2rem;   /*reduxz o tamanho do titulo dos cards PARA UM TITULO MAIS COMPACTO*/
+    }
+
+    .card .description {
+        font-size: 0.80rem;      /*Reduz o tamanho dos texto, levemente*/
+    }
+
+    .card .leia-mais {
+        font-size: 0.80rem; /*Botão menores*/
+        padding: 3px 5px; /*menos espaços internos dos botões*/
+    }
+}
+

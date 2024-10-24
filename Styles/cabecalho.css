@@ -1,0 +1,267 @@
+/* Estilo global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Fonte global */
+  background-color:rgb(235, 233, 233);; /* Cor de fundo global */
+}
+
+/* Cabeçalho (header) */
+header {
+  display: flex; /* Layout flexível para alinhar elementos */
+  justify-content: center; /* Espaçar itens igualmente */
+  align-items: center; /* Centralizar verticalmente */
+  padding: 25px; /* Espaçamento interno */
+  background-color: white; /* Cor de fundo do cabeçalho */
+}
+
+/* Logo da empresa */
+.logo {
+  height: 60px; /* Tamanho da logo */
+  margin-right: 15rem; /* Espaçamento entre a logo e o texto */
+}
+
+/* Container do menu de navegação */
+.menu__container {
+  display: flex; /* Itens do menu alinhados em linha */
+  align-items: center; /* Centralizar verticalmente os itens do menu */
+}
+
+/* Lista de navegação principal */
+.menu__list {
+  list-style: none; /* Remover bullets (pontos) da lista */
+  margin: 0; /* Remover margens */
+  padding: 0; /* Remover preenchimento interno */
+  display: flex; /* Itens da lista em linha */
+}
+
+/* Estilo de cada item do menu */
+.menu__item {
+  position: relative; /* Necessário para o submenu (dropdown) */
+  margin-left: 10px; /* Espaçamento entre os itens */
+}
+
+.menu__item a {
+  color: #1c244b; /* Cor do texto do link */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none; /* Remover sublinhado do link */
+  padding: 8px 15px; /* Espaçamento interno do link */
+  display: block; /* Faz o link ocupar toda a área */
+  font-size: 16px; /* Tamanho da fonte dos links */
+  transition: color 0.3s ease; /* Animação na mudança de cor */
+}
+
+.menu__item a:hover {
+  color: #e37932; /* Cor ao passar o mouse sobre o link */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+  transform: translateY(-5px);     /* Move o card para cima ao passar o mouse */
+
+}
+
+/* Estilos do submenu (dropdown) */
+.submenu {
+  display: none; /* Esconder o submenu inicialmente */
+  position: absolute; /* Para posicionar o submenu */
+  top: 100%; /* Coloca o submenu abaixo do item pai */
+  left: 0; /* Alinhamento à esquerda */
+  background-color: #f9f9f9; /* Cor de fundo do submenu */
+  list-style: none; /* Remover bullets (pontos) da lista */
+  padding: 10px 0; /* Espaçamento interno no submenu */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /*Sombra do submenu*/
+  z-index: 100; /* Valor alto para garantir que fique acima das imagens */
+}
+
+.menu__item:hover .submenu {
+  display: block; /* Mostrar o submenu ao passar o mouse */
+}
+
+/* Estilo de cada item do submenu */
+.submenu__item a {
+  color: #333333; /* Cor do texto do link no submenu */
+  text-decoration: none; /* Remover sublinhado dos links */
+  padding: 10px 10px;
+  display: block; /* O link ocupa toda a área */
+  transition: background-color 0.3s ease; /* Animação na cor de fundo */
+  border-bottom: 2px solid #E4E0E1; /* Linha separadora sutil */
+  min-width: 207px;
+  text-align: left;
+}
+
+.submenu__item a:hover {
+  background-color: #E4E0E1; /* Cor de fundo ao passar o mouse no submenu */
+  color: #F95454; /* Cor do texto ao passar o mouse no submenu */
+}
+
+/* Adiciona uma seta no item "Soluções" */
+.menu__item a i {
+  margin-left: 5px; /* Espaçamento entre o texto e a seta */
+  transition: transform 0.3s ease; /* Animação de rotação da seta */
+  font-size: 15px;
+  position: relative;
+  top: -1px;
+  font-weight: bold;
+}
+
+.menu__item:hover i {
+  transform: rotate(180deg); /* Girar seta ao passar o mouse */
+}
+
+/* Alternativa de seta com CSS puro */
+.menu__item a::after {
+  content: ''; /* Conteúdo da seta */
+  border: solid transparent; /* Seta transparente */
+  border-width: 5px; /* Largura das bordas (seta) */
+  border-top-color: #ecf0f1; /* Cor da seta (frente) */
+  position: relative; /* Posicionar a seta */
+  margin-left: 8px; /* Espaçamento entre o texto e a seta */
+  top: 10px; /* Ajuste vertical da seta */
+  transition: transform 0.3s ease; /* Animação de rotação*/
+}
+
+.menu__item:hover a::after {
+  transform: rotate(180deg); /* Girar seta ao passar o mouse */
+}
+
+/* Estilo do botão */
+button {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  background: #e37932;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  color: #183153;
+  background: #183153;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+  background-color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsividade - Estilo para telas menores */
+
+/* Esconde o menu em telas pequenas (mobile) */
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  /* Estilo para o botão hamburguer */
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .menu-button span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-button.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-button.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-button.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Menu hamburguer */
+  .menu__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  .menu__list.active {
+    display: flex;
+  }
+
+  .menu__item {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .menu__item a {
+    display: block;
+    padding: 15px;
+  }
+
+  /* Estilizando o submenu */
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    padding: 0;
+    background-color: white;
+  }
+}
